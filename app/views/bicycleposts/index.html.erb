@@ -1,0 +1,27 @@
+<h1>Bicycleposts#index</h1>
+<p>Find me in app/views/bicycleposts/index.html.erb</p>
+
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>value</th>
+		<th>description</th>
+		<th>category</th>
+		<th colspan="2"></th>
+	</tr>
+
+	<% @data.each do |obj| %>
+	<tr>
+		<td><%= obj.id %></td>
+		<td><%= obj.name %></td>
+		<td><%= obj.value %></td>
+		<td><%= obj.description %></td>
+		<td><%= obj.bicyclecategory.name %></td>
+		<td><a href="/bicyceposts/<%= obj.id %>">Edit</a></td>
+		<td><a href="/bicycleposts/delete/<%= obj.id %>">Delete</td>
+	</tr>
+	<% end %>
+</table>
+<p><a href="/bicycleposts/add">新規作成＞＞</a></p>
+</table>

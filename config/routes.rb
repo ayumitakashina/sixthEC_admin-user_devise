@@ -1,4 +1,25 @@
 Rails.application.routes.draw do
+  get 'bicycleposts/index'
+
+  get 'bicycleposts/add'
+
+  get 'bicycleposts/edit'
+
+  get 'bicycleposts/delete'
+
+  get 'bicyclecategories/index'
+
+  get 'bicyclecategories/add'
+
+  get 'bicyclecategories/edit'
+
+  get 'bicycleconfigs/index'
+
+  get 'bicycleconfigs/edit'
+  resources :bicycleposts
+  resources :bicycleconfigs
+  resources :bicyclecategories
+
   devise_for :admins
   	as :admmin do 
   		get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'

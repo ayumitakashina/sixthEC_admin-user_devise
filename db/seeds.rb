@@ -9,3 +9,5 @@ Admin.find_or_create_by(id:1) do |admin|
 	admin.email = 'moira.horizon@gmail.com'
 	admin.password = 'password'
 end
+
+Bicycleconfig.create(id:1, name: 'Allant 7.4', value:'95000')
